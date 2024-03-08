@@ -1,10 +1,12 @@
 import sys
+import os
 import mc_log_ui
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
-
+import img2pdf
+from PIL import Image # img2pdfと一緒にインストールされたPillowを使います
 
 def main(): 
     args = sys.argv
@@ -57,20 +59,34 @@ def main():
     for log_name in logged_list:
         df[log_name] = log[log_name]
 
-    #データをcsvファイルに書き出し
+    #データの保存先 / ファイル名
     file_name = (args[1].split('/')[-1]).strip(".bin")
-    df.to_csv(file_name + ".csv")
+    
+    #データ用フォルダの作成
+    if not os.path.isdir(file_name):
+        os.mkdir(file_name)
 
-    pdf = PdfPages(file_name + ".pdf")
+    #データをcsvファイルに書き出し
+    df.to_csv(file_name + "/" + file_name + ".csv")
 
+    #データをimageに書き出し
+    if not os.path.isdir(file_name + "/image"):
+        os.mkdir(file_name + "/image")
+    
     for i in range(len(logged_list)):
         fig, ax = plt.subplots()
         ax.plot(df[logged_list[i]], "o-", markersize=0.1, color='Red')
         ax.set_title(logged_list[i])
         fig.tight_layout()
-        pdf.savefig(fig)
-        
-    pdf.close()
+        fig.savefig(file_name + "/image/" + logged_list[i] + ".png")
+
+    pdf_path = file_name + "/" + file_name + ".pdf"
+    image_path = file_name + "/image/"
+    extension = ".png"
+
+    with open(pdf_path,"wb") as f:
+        # 画像フォルダの中にあるPNGファイルを取得し配列に追加、バイナリ形式でファイルに書き込む
+        f.write(img2pdf.convert([Image.open(image_path+j).filename for j in os.listdir(image_path)if j.endswith(extension)]))
 
 if __name__ == "__main__":
     main()
