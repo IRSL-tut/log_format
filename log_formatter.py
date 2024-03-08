@@ -7,13 +7,22 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 import img2pdf
 from PIL import Image # img2pdfと一緒にインストールされたPillowを使います
+import shutil
 
 def main(): 
     args = sys.argv
-    if len(args) > 1:
+    log_path = None
+    config_path = None
+    if len(args) == 2:
+        log_path = args[1]
         print(args[1])
+    elif len(args) == 3:
+        log_path = args[1]
+        config_path = args[2]
+        print(log_path) # log file
+        print(config_path) # config file
 
-    log = mc_log_ui.read_log(args[1])
+    log = mc_log_ui.read_log(log_path)
     xyz = ["x", "y", "z"]
     wrench = ["fx", "fy", "fz", "cx", "cy", "cz"]
 
@@ -60,7 +69,7 @@ def main():
         df[log_name] = log[log_name]
 
     #データの保存先 / ファイル名
-    file_name = (args[1].split('/')[-1]).strip(".bin")
+    file_name = (log_path.split('/')[-1]).strip(".bin")
     
     #データ用フォルダの作成
     if not os.path.isdir(file_name):
@@ -88,6 +97,13 @@ def main():
     with open(pdf_path,"wb") as f:
         # 画像フォルダの中にあるPNGファイルを取得し配列に追加、バイナリ形式でファイルに書き込む
         f.write(img2pdf.convert([Image.open(image_path+j).filename for j in os.listdir(image_path)if j.endswith(extension)]))
+    
+    # binファイルのコピー
+    shutil.copyfile(log_path,file_name + "/" + log_path.split('/')[-1])
+
+    # configファイルのコピー
+    if(config_path != None):
+        shutil.copyfile(config_path,file_name + "/" + config_path.split('/')[-1])
 
 if __name__ == "__main__":
     main()
