@@ -69,10 +69,11 @@ def main():
     #データをcsvファイルに書き出し
     df.to_csv(file_name + "/" + file_name + ".csv")
 
-    #データをimageに書き出し
+    #image用フォルダの作成
     if not os.path.isdir(file_name + "/image"):
         os.mkdir(file_name + "/image")
     
+    #データをimageに書き出し    
     for i in range(len(logged_list)):
         fig, ax = plt.subplots()
         ax.plot(df[logged_list[i]], "o-", markersize=0.1, color='Red')
