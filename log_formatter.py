@@ -17,10 +17,10 @@ def main():
         log_path = args[1]
         print(args[1])
     elif len(args) == 3:
-        log_path = args[1]
-        config_path = args[2]
-        print(log_path) # log file
-        print(config_path) # config file
+        config_path = args[1]
+        log_path = args[2]
+        print("log " + log_path) # log file
+        print("config " + config_path) # config file
 
     log = mc_log_ui.read_log(log_path)
     xyz = ["x", "y", "z"]
@@ -49,6 +49,10 @@ def main():
         "FootTask_Left_targetWrench",
         "FootTask_Right_targetWrench",
     ]
+
+    footmanger_param = [
+        "FootManager_supportPhase",
+    ]
     
     # add "x", "y", "z" to the logged_list
     for log_name in centroidal_param:
@@ -60,6 +64,10 @@ def main():
         for axis in wrench:
             logged_list.append(log_name + "_" + axis)
 
+    # add "supportPhase" to the logged_list
+    for log_name in footmanger_param:
+        logged_list.append(log_name)
+        
     #columns : logged_list
     #index : log["t"]
     df = pd.DataFrame(index=log["t"], columns=logged_list)
