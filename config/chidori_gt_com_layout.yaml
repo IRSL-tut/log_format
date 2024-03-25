@@ -1,0 +1,17 @@
+main:
+###    newline: false
+  CoM_X:
+    legends:
+      - { key: CM_CoM_realRobot,    id: [0] }
+      - { key: GT_CoM,              id: [0] }
+    bottom_label:
+  CoM_Y:
+    legends:
+      - { key: CM_CoM_realRobot,    id: [1] }
+      - { key: GT_CoM,              id: [1] }
+    bottom_label:
+  CoM_Z:
+    legends:
+      - { key: CM_CoM_realRobot,    id: [2] }
+      - { key: GT_CoM,              id: [2] }
+    bottom_label:

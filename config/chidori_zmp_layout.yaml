@@ -1,0 +1,16 @@
+main:
+###    newline: false
+  ZMP_X:
+    legends:
+      - { key: CM_ZMP_ref,      id: [0] }
+      - { key: CM_ZMP_control,  id: [0] }
+      - { key: CM_ZMP_planned,  id: [0] }
+      - { key: CM_ZMP_measured, id: [0] }
+    bottom_label:
+  ZMP_Y:
+    legends:
+      - { key: CM_ZMP_ref,      id: [1] }
+      - { key: CM_ZMP_control,  id: [1] }
+      - { key: CM_ZMP_planned,  id: [1] }
+      - { key: CM_ZMP_measured, id: [1] }
+    bottom_label:

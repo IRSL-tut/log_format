@@ -1,0 +1,30 @@
+main:
+###    newline: false
+  Foot_pos:
+    legends:
+      - { key: GT_Rfoot_pos, id: [2], label: R_Z }
+      - { key: GT_Lfoot_pos, id: [2], label: L_Z }
+      - { key: GT_Rfoot_pos, id: [0], label: R_X }
+      - { key: GT_Lfoot_pos, id: [0], label: L_X }
+      - { key: GT_Rfoot_pos, id: [1], label: R_Y }
+      - { key: GT_Lfoot_pos, id: [1], label: L_Y }
+    bottom_label:
+  Foot_rot:
+    legends:
+      - { key: GT_Rfoot_pos, id: [4], label: R_pitch }
+      - { key: GT_Lfoot_pos, id: [4], label: L_pitch }
+      - { key: GT_Rfoot_pos, id: [3], label: R_roll }
+      - { key: GT_Lfoot_pos, id: [3], label: L_roll }
+  bush_diff:
+    legends:
+      - { key: GT_Rbush_diff_pos, id: [4], label: R_pitch }
+      - { key: GT_Lbush_diff_pos, id: [4], label: L_pitch }
+      - { key: GT_Rbush_diff_pos, id: [3], label: R_roll }
+      - { key: GT_Lbush_diff_pos, id: [3], label: L_roll  }
+  Root_Roll/Pitch:
+    legends:
+      - { key: CM_RealRobot_rot,    id: [0], label: 'Roll realRobot' }
+      - { key: GT_Root_pos,         id: [3], label: 'Roll GT' }
+      - { key: CM_RealRobot_rot,    id: [1], label: 'Pitch realRobot' }
+      - { key: GT_Root_pos,         id: [4], label: 'Pitch GT' }
+    bottom_label:

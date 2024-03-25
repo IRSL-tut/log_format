@@ -1,0 +1,43 @@
+main:
+###    newline: false
+  ZMP_Y:
+    legends:
+      - { key: CM_ZMP_ref,      id: [1] }
+      - { key: CM_ZMP_control,  id: [1] }
+      - { key: CM_ZMP_planned,  id: [1] }
+      - { key: CM_ZMP_measured, id: [1] }
+    bottom_label:
+  CoM/Pos_Y:
+    legends:
+      # - { key: CM_CoM_planned,      id: [0] }
+      - { key: CM_CoM_controlRobot, id: [1] }
+      - { key: CM_CoM_realRobot,    id: [1] }
+      #- { key: GT_CoM,              id: [0] }
+      - { key: CM_CoM_real_sub_control, id: [1] }
+      - { key: CM_ControlRobot_pos, id: [1] }
+      - { key: CM_RealRobot_pos,    id: [1] }
+      # - { key: GT_Root_pos,         id: [0] }
+      - { key: CM_Robot_pos_real_sub_control, id: [1] }
+    bottom_label:
+  Roll:
+    legends:
+      - { key: CM_ControlRobot_rot, id: [0] }
+      - { key: CM_RealRobot_rot,    id: [0] }
+      - { key: GT_Rbush_pos, id: [3], label: GT_R_bush }
+      - { key: GT_Lbush_pos, id: [3], label: GT_L_bush }
+      # - { key: GT_Root_pos,         id: [4] }
+    bottom_label:
+  M_x:
+    legends:
+      - { key: FT_Left_filteredMeasuredWrench,  id: [3] }
+      - { key: FT_Right_filteredMeasuredWrench, id: [3] }
+      - { key: FT_Left_targetWrench,  id: [3] }
+      - { key: FT_Right_targetWrench, id: [3] }
+    bottom_label:
+  F_z:
+    legends:
+      - { key: FT_Left_filteredMeasuredWrench,  id: [2] }
+      - { key: FT_Right_filteredMeasuredWrench, id: [2] }
+      - { key: FT_Left_targetWrench,  id: [2] }
+      - { key: FT_Right_targetWrench, id: [2] }
+    bottom_label:

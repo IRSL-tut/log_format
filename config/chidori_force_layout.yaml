@@ -1,0 +1,22 @@
+main:
+  F/M_x:
+    legends:
+      - { key: FT_Left_filteredMeasuredWrench,  id: [0, 3] }
+      - { key: FT_Right_filteredMeasuredWrench, id: [0, 3] }
+      - { key: FT_Left_targetWrench,  id: [0, 3] }
+      - { key: FT_Right_targetWrench, id: [0, 3] }
+    bottom_label:
+  F/M_y:
+    legends:
+      - { key: FT_Left_filteredMeasuredWrench,  id: [1, 4] }
+      - { key: FT_Right_filteredMeasuredWrench, id: [1, 4] }
+      - { key: FT_Left_targetWrench,  id: [1, 4] }
+      - { key: FT_Right_targetWrench, id: [1, 4] }
+    bottom_label:
+  F/M_z:
+    legends:
+      - { key: FT_Left_filteredMeasuredWrench,  id: [2, 5] }
+      - { key: FT_Right_filteredMeasuredWrench, id: [2, 5] }
+      - { key: FT_Left_targetWrench,  id: [2, 5] }
+      - { key: FT_Right_targetWrench, id: [2, 5] }
+    bottom_label:

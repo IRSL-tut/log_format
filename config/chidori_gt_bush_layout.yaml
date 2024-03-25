@@ -1,0 +1,28 @@
+main:
+###    newline: false
+  r_bush_pos:
+    legends:
+      #- { key: GT_Rbush_pos, id: [0], label: X }
+      #- { key: GT_Rbush_pos, id: [1], label: Y }
+      - { key: GT_Rbush_diff_pos, id: [2], label: bush Z }
+    bottom_label:
+  r_bush_rot:
+    legends:
+      - { key: GT_Rbush_diff_pos, id: [3], label: roll(diff) }
+      - { key: GT_Rbush_diff_pos, id: [4], label: pitch(diff) }
+      - { key: GT_Rbush_origin_pos, id: [3], label: roll(origin) }
+      - { key: GT_Rbush_origin_pos, id: [4], label: pitch(origin) }
+    bottom_label:
+  l_bush_pos:
+    legends:
+      #- { key: GT_Lbush_pos, id: [0], label: X  }
+      #- { key: GT_Lbush_pos, id: [1], label: Y  }
+      - { key: GT_Lbush_diff_pos, id: [2], label: Z  }
+    bottom_label:
+  l_bush_rot:
+    legends:
+      - { key: GT_Lbush_diff_pos, id: [3], label: roll(diff)  }
+      - { key: GT_Lbush_diff_pos, id: [4], label: pitch(diff)  }
+      - { key: GT_Lbush_origin_pos, id: [3], label: roll(origin) }
+      - { key: GT_Lbush_origin_pos, id: [4], label: pitch(origin) }
+    bottom_label:

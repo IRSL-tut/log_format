@@ -1,0 +1,21 @@
+main:
+###    newline: false
+  X:
+    legends:
+      - { key: CM_RealRobot_pos,    id: [0], label: 'X realRobot' }
+      - { key: GT_Root_pos,         id: [0], label: 'X GT'  }
+    bottom_label:
+  Y/Z:
+    legends:
+      - { key: CM_RealRobot_pos,    id: [1], label: 'Y realRobot' }
+      - { key: GT_Root_pos,         id: [1], label: 'Y GT' }
+      - { key: CM_RealRobot_pos,    id: [2], label: 'Z realRobot' }
+      - { key: GT_Root_pos,         id: [2], label: 'Z GT' }
+    bottom_label:
+  Roll/Pitch:
+    legends:
+      - { key: CM_RealRobot_rot,    id: [0], label: 'Roll realRobot' }
+      - { key: GT_Root_pos,         id: [3], label: 'Roll GT' }
+      - { key: CM_RealRobot_rot,    id: [1], label: 'Pitch realRobot' }
+      - { key: GT_Root_pos,         id: [4], label: 'Pitch GT' }
+    bottom_label:

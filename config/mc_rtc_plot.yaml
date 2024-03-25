@@ -1,0 +1,106 @@
+## mc_rtc
+CM_ControlRobot_pos:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_ControlRobot_position, column: [0-2] }
+CM_ControlRobot_rot:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_ControlRobot_orientation, column: [0-2] }
+CM_RealRobot_pos:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_RealRobot_position, column: [0-2] }
+CM_RealRobot_rot:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_RealRobot_orientation, column: [0-2] }
+CM_Robot_pos_real_sub_control:
+  func: plot_diff
+  data:
+    - { log: CentroidalManager_IRSL_LOG_RealRobot_position, column: [0-2] }
+    - { log: CentroidalManager_IRSL_LOG_ControlRobot_position, column: [0-2] }
+CM_Robot_rot_real_sub_control:
+  func: plot_diff
+  data:
+    - { log: CentroidalManager_IRSL_LOG_RealRobot_orientation, column: [0-2] }
+    - { log: CentroidalManager_IRSL_LOG_ControlRobot_orientation, column: [0-2] }
+CM_CoM_planned:
+  data:
+    - { log: CentroidalManager_CoM_planned, column: [0-2] }
+CM_CoM_controlRobot:
+  data:
+    - { log: CentroidalManager_CoM_controlRobot, column: [0-2] }
+CM_CoM_realRobot:
+  data:
+    - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
+CM_CoM_real_sub_control:
+  func: plot_diff
+  data:
+    - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
+    - { log: CentroidalManager_CoM_controlRobot, column: [0-2] }
+CM_CoM_realRobot_vel:
+  data:
+    - { log: CentroidalManager_CoM_realRobot_comVelocity, column: [0-2] }
+CM_CoM_realRobot_acc:
+  data:
+    - { log: CentroidalManager_CoM_realRobot_comAcceleration, column: [0-2] }
+CM_ZMP_ref:
+  data:
+    - { log: CentroidalManager_ZMP_ref, column: [0-2] }
+CM_ZMP_control:
+  data:
+    - { log: CentroidalManager_ZMP_control, column: [0-2] }
+CM_ZMP_planned:
+  data:
+    - { log: CentroidalManager_ZMP_planned, column: [0-2] }
+CM_ZMP_measured:
+  data:
+    - { log: CentroidalManager_ZMP_measured, column: [0-2] }
+FT_Left_filteredMeasuredWrench:
+  data:
+    - { log: FootTask_Left_filteredMeasuredWrench, column: [0-5] }
+FT_Right_filteredMeasuredWrench:
+  data:
+    - { log: FootTask_Right_filteredMeasuredWrench, column: [0-5] }
+FT_Left_targetWrench:
+  data:
+    - { log: FootTask_Left_targetWrench, column: [0-5] }
+FT_Right_targetWrench:
+  data:
+    - { log: FootTask_Right_targetWrench, column: [0-5] }
+GT_CoM:
+  data:
+    - { log: GT_com, column: [0-2] }
+GT_Root_pos:
+  data:
+    - { log: GT_rootPos, column: [0-5] }
+GT_Rfoot_pos:
+  data:
+    - { log: GT_rfoot_pos, column: [0-5] }
+GT_Lfoot_pos:
+  data:
+    - { log: GT_lfoot_pos, column: [0-5] }
+GT_Rbush_diff_pos:
+  data:
+    - { log: GT_rfoot_bush_diff, column: [0-5] }
+GT_Lbush_diff_pos:
+  data:
+    - { log: GT_lfoot_bush_diff, column: [0-5] }
+GT_Rbush_origin_pos:
+  data:
+    - { log: GT_rfoot_bush_org, column: [0-5] }
+GT_Lbush_origin_pos:
+  data:
+    - { log: GT_lfoot_bush_org, column: [0-5] }
+#abc_refZmp:
+#  func: plot_add
+#  data:
+#    - { log: abc_zmpOut, column: [0-2] }
+#    - { log: abc_baseTformOut, column: [0-2] }
+#  func: plot_inverse
+#  func: plot_comp
+#  func: plot_rad2deg
+#  func: plot_rad2deg_vel
+#  func: plot_COP
+# time
+time:
+  func: plot_time
+  data:
+    - { log: sh_qOut, column: [0]}

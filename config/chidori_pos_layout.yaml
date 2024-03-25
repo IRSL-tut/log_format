@@ -1,0 +1,49 @@
+main:
+  PosX:
+    legends:
+      - { key: CM_ControlRobot_pos, id: [0] }
+      - { key: CM_RealRobot_pos,    id: [0] }
+      # - { key: GT_Root_pos,         id: [0] }
+      - { key: CM_Robot_pos_real_sub_control, id: [0] }
+    bottom_label:
+#  PosYZ:
+#    legends:
+#      - { key: CM_ControlRobot_pos, id: [1] }
+#      - { key: CM_RealRobot_pos,    id: [1] }
+#      - { key: CM_ControlRobot_pos, id: [2] }
+#      - { key: CM_RealRobot_pos,    id: [2] }
+#    bottom_label:
+#    newline: false
+  PosY:
+    legends:
+      - { key: CM_ControlRobot_pos, id: [1] }
+      - { key: CM_RealRobot_pos,    id: [1] }
+      # - { key: GT_Root_pos,         id: [1] }
+      - { key: CM_Robot_pos_real_sub_control, id: [1] }
+    bottom_label:
+  PosZ:
+    legends:
+      - { key: CM_ControlRobot_pos, id: [2] }
+      - { key: CM_RealRobot_pos,    id: [2] }
+      # - { key: GT_Root_pos,         id: [2] }
+    bottom_label:
+  Roll:
+    legends:
+      - { key: CM_ControlRobot_rot, id: [0] }
+      - { key: CM_RealRobot_rot,    id: [0] }
+      # - { key: GT_Root_pos,         id: [3] }
+    bottom_label:
+#  PosYZ:
+#    legends:
+#      - { key: CM_ControlRobot_pos, id: [1] }
+#      - { key: CM_RealRobot_pos,    id: [1] }
+#      - { key: CM_ControlRobot_pos, id: [2] }
+#      - { key: CM_RealRobot_pos,    id: [2] }
+#    bottom_label:
+#    newline: false
+  Pitch:
+    legends:
+      - { key: CM_ControlRobot_rot, id: [1] }
+      - { key: CM_RealRobot_rot,    id: [1] }
+      # - { key: GT_Root_pos,         id: [4] }
+    bottom_label:
