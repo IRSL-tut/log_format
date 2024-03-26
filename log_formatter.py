@@ -25,7 +25,7 @@ def main():
     log = mc_log_ui.read_log(log_path)
     xyz = ["x", "y", "z"]
     wrench = ["fx", "fy", "fz", "cx", "cy", "cz"]
-
+    joint = ["0" , "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
     logged_list = []
 
     centroidal_param = [
@@ -45,6 +45,7 @@ def main():
         "CentroidalManager_ZMP_measured",
     ]
     
+    
     foottask_param = [
         "FootTask_Left_filteredMeasuredWrench",
         "FootTask_Right_filteredMeasuredWrench",
@@ -54,6 +55,10 @@ def main():
 
     footmanger_param = [
         "FootManager_supportPhase",
+    ]
+
+    qout_param = [
+        "qOut",
     ]
     
     # add "x", "y", "z" to the logged_list
@@ -70,6 +75,11 @@ def main():
     for log_name in footmanger_param:
         logged_list.append(log_name)
         
+    # add "qout" to the logged_list
+    for log_name in qout_param:
+        for joint_name in joint:
+            logged_list.append(log_name + "_" + joint_name)
+            
     #columns : logged_list
     #index : log["t"]
     df = pd.DataFrame(index=log["t"], columns=logged_list)
@@ -111,9 +121,9 @@ def main():
     # binファイルのコピー
     shutil.copyfile(log_path,file_name + "/" + log_path.split('/')[-1])
 
-    # configファイルのコピー
+    # configファイルをtextファイルにコピー
     if(config_path != None):
-        shutil.copyfile(config_path,file_name + "/" + config_path.split('/')[-1])
-
+        shutil.copyfile(config_path,file_name + "/" + file_name + ".txt")
+        
 if __name__ == "__main__":
     main()
