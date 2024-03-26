@@ -1,0 +1,8 @@
+img2pdf==0.5.1
+matplotlib==3.1.2
+numpy==1.17.4
+pandas==0.25.3
+Pillow==7.0.0
+Pillow==10.2.0
+metayaml==1.2
+pyqtgraph==0.12.4 

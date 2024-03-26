@@ -3,7 +3,7 @@
 ### Install
 
 ```
-python3 -m pip install metayaml pyqtgraph==0.12.4
+python3 -m pip install -r requirements.txt
 ```
 
 
@@ -29,4 +29,16 @@ datalogger_plotter_with_pyqtgraph.py --start 8700 --length 3300 -f mc-control-Ba
 ```
 python3 generate_plotter.py mc-rtc-log.csv
 ## may generate mc-rtc-log.xxxxxxxx files
+```
+
+# log_formatter
+
+### using copy setting file
+```
+python3 log_formatter.py path-to-param.yaml path-to-log.bin
+```
+
+### using only log file
+```
+python3 log_formatter.py path-to-log.bin
 ```
