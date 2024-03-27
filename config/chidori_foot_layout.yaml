@@ -1,0 +1,15 @@
+main:
+  Foot_X:
+    legends:
+      - { key: Real_Right_FootPos, id: [0] }
+      - { key: Real_Left_FootPos, id: [0] }
+      - { key: Control_Right_FootPos, id: [0] }
+      - { key: Control_Left_FootPos, id: [0] }
+    bottom_label:
+  Foot_Z:
+    legends:
+      - { key: Real_Right_FootPos, id: [2] }
+      - { key: Real_Left_FootPos, id: [2] }
+      - { key: Control_Right_FootPos, id: [2] }
+      - { key: Control_Left_FootPos, id: [2] }
+    bottom_label:
