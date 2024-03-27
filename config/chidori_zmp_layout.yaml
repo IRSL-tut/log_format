@@ -14,3 +14,21 @@ main:
       - { key: CM_ZMP_planned,  id: [1] }
       - { key: CM_ZMP_measured, id: [1] }
     bottom_label:
+  DCM_X:
+    legends:
+      - { key: CM_DCM_planned,   id: [0] }
+      - { key: CM_DCM_real,      id: [0] }
+      - { key: CM_DCM_diff,      id: [0] }
+      - { key: CM_CoM_real_sub_control, id: [0] }
+      - { key: CM_CoM_controlRobot_vel, id: [0] }
+      - { key: CM_CoM_realRobot_vel,    id: [0] }
+    bottom_label:
+  DCM_Y:
+    legends:
+      - { key: CM_DCM_planned,   id: [1] }
+      - { key: CM_DCM_real,      id: [1] }
+      - { key: CM_DCM_diff,      id: [1] }
+      - { key: CM_CoM_real_sub_control, id: [1] }
+      - { key: CM_CoM_controlRobot_vel, id: [1] }
+      - { key: CM_CoM_realRobot_vel,    id: [1] }
+    bottom_label:

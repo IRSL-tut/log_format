@@ -1,0 +1,17 @@
+main:
+  CoM_X:
+    legends:
+      - { key: CM_CoM_controlRobot_vel, id: [0] }
+      - { key: CM_CoM_realRobot_vel,    id: [0] }
+    bottom_label:
+  CoM_Y:
+    legends:
+      - { key: CM_CoM_controlRobot_vel, id: [1] }
+      - { key: CM_CoM_realRobot_vel,    id: [1] }
+    bottom_label:
+  Pitch(Pos):
+    legends:
+      - { key: CM_ControlRobot_rot, id: [1] }
+      - { key: CM_RealRobot_rot,    id: [1] }
+      # - { key: GT_Root_pos,         id: [4] }
+    bottom_label:

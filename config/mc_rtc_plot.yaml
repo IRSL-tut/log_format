@@ -5,12 +5,26 @@ CM_ControlRobot_pos:
 CM_ControlRobot_rot:
   data:
     - { log: CentroidalManager_IRSL_LOG_ControlRobot_orientation, column: [0-2] }
+CM_ControlRobot_q:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_ControlRobot_q, column: [0-11] }
+CM_ControlRobot_dq:
+  func: plot_velocity
+  data:
+    - { log: CentroidalManager_IRSL_LOG_ControlRobot_q, column: [0-11] }
 CM_RealRobot_pos:
   data:
     - { log: CentroidalManager_IRSL_LOG_RealRobot_position, column: [0-2] }
 CM_RealRobot_rot:
   data:
     - { log: CentroidalManager_IRSL_LOG_RealRobot_orientation, column: [0-2] }
+CM_RealRobot_q:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_RealRobot_q, column: [0-11] }
+CM_RealRobot_dq:
+  func: plot_velocity
+  data:
+    - { log: CentroidalManager_IRSL_LOG_RealRobot_q, column: [0-11] }
 CM_Robot_pos_real_sub_control:
   func: plot_diff
   data:
@@ -24,10 +38,22 @@ CM_Robot_rot_real_sub_control:
 CM_CoM_planned:
   data:
     - { log: CentroidalManager_CoM_planned, column: [0-2] }
+CM_CoM_planned_vel:
+  func: plot_velocity
+  data:
+    - { log: CentroidalManager_CoM_planned, column: [0-2] }
 CM_CoM_controlRobot:
   data:
     - { log: CentroidalManager_CoM_controlRobot, column: [0-2] }
+CM_CoM_controlRobot_vel:
+  func: plot_velocity
+  data:
+    - { log: CentroidalManager_CoM_controlRobot, column: [0-2] }
 CM_CoM_realRobot:
+  data:
+    - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
+CM_CoM_realRobot_vel:
+  func: plot_velocity
   data:
     - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
 CM_CoM_real_sub_control:
@@ -53,6 +79,17 @@ CM_ZMP_planned:
 CM_ZMP_measured:
   data:
     - { log: CentroidalManager_ZMP_measured, column: [0-2] }
+CM_DCM_planned:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_PlannedRobot_dcm, column: [0-2] }
+CM_DCM_real:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_RealRobot_dcm, column: [0-2] }
+CM_DCM_diff:
+  func: plot_diff
+  data:
+    - { log: CentroidalManager_IRSL_LOG_RealRobot_dcm, column: [0-2] }
+    - { log: CentroidalManager_IRSL_LOG_PlannedRobot_dcm, column: [0-2] }
 FT_Left_filteredMeasuredWrench:
   data:
     - { log: FootTask_Left_filteredMeasuredWrench, column: [0-5] }
@@ -89,6 +126,7 @@ GT_Rbush_origin_pos:
 GT_Lbush_origin_pos:
   data:
     - { log: GT_lfoot_bush_org, column: [0-5] }
+
 #abc_refZmp:
 #  func: plot_add
 #  data:
