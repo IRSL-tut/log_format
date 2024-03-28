@@ -42,3 +42,9 @@ python3 log_formatter.py path-to-param.yaml path-to-log.bin
 ```
 python3 log_formatter.py path-to-log.bin
 ```
+
+# Convert mc-rtc log to hrpsys log
+
+```
+python3 python3 log_converter.py -f path-to-log.bin --plot config/mc_rtc_plot.yaml
+```
