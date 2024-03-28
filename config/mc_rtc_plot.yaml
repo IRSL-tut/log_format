@@ -126,7 +126,24 @@ GT_Rbush_origin_pos:
 GT_Lbush_origin_pos:
   data:
     - { log: GT_lfoot_bush_org, column: [0-5] }
-
+Real_totalMomentum:
+  data:
+    - { log: Real_totalMomentum, column: [0-5] }
+Real_Left_FootPos:
+  data:
+    - { log: Real_Left_FootPos, column: [0-5] }
+Real_Right_FootPos:
+  data:
+    - { log: Real_Right_FootPos, column: [0-5] }
+Control_totalMomentum:
+  data:
+    - { log: Control_totalMomentum, column: [0-5] }
+Control_Left_FootPos:
+  data:
+    - { log: Control_Left_FootPos, column: [0-5] }
+Control_Right_FootPos:
+  data:
+    - { log: Control_Right_FootPos, column: [0-5] }
 #abc_refZmp:
 #  func: plot_add
 #  data:

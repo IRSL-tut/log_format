@@ -1,0 +1,33 @@
+main:
+#  ZMP_X:
+#    legends:
+#      - { key: CM_ZMP_ref,      id: [0] }
+#      - { key: CM_ZMP_control,  id: [0] }
+#      - { key: CM_ZMP_planned,  id: [0] }
+#      - { key: CM_ZMP_measured, id: [0] }
+#    bottom_label:
+#  ZMP_Y:
+#    legends:
+#      - { key: CM_ZMP_ref,      id: [1] }
+#      - { key: CM_ZMP_control,  id: [1] }
+#      - { key: CM_ZMP_planned,  id: [1] }
+#      - { key: CM_ZMP_measured, id: [1] }
+#    bottom_label:
+  Momentum(Real):
+    legends:
+      - { key: Real_totalMomentum, id: [0] }
+      - { key: Real_totalMomentum, id: [1] }
+      - { key: Real_totalMomentum, id: [2] }
+      - { key: Real_totalMomentum, id: [3] }
+      - { key: Real_totalMomentum, id: [4] }
+      - { key: Real_totalMomentum, id: [5] }
+    bottom_label:
+  Momentum(Control):
+    legends:
+      - { key: Control_totalMomentum, id: [0] }
+      - { key: Control_totalMomentum, id: [1] }
+      - { key: Control_totalMomentum, id: [2] }
+      - { key: Control_totalMomentum, id: [3] }
+      - { key: Control_totalMomentum, id: [4] }
+      - { key: Control_totalMomentum, id: [5] }
+    bottom_label:
