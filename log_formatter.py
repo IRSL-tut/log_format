@@ -33,6 +33,8 @@ def main():
         "CentroidalManager_IRSL_LOG_ControlRobot_orientation",
         "CentroidalManager_IRSL_LOG_RealRobot_position",
         "CentroidalManager_IRSL_LOG_RealRobot_orientation",
+        "CentroidalManager_IRSL_LOG_PlannedRobot_dcm",
+        "CentroidalManager_IRSL_LOG_RealRobot_dcm",
         "CentroidalManager_CoM_planned",
         "CentroidalManager_CoM_controlRobot",
         "CentroidalManager_CoM_realRobot_com",
@@ -58,7 +60,8 @@ def main():
     ]
 
     qout_param = [
-        "qOut",
+        "CentroidalManager_IRSL_LOG_ControlRobot_q",
+        "CentroidalManager_IRSL_LOG_RealRobot_q",
     ]
     
     # add "x", "y", "z" to the logged_list
@@ -98,25 +101,25 @@ def main():
     #データをcsvファイルに書き出し
     df.to_csv(file_name + "/" + file_name + ".csv")
 
-    #image用フォルダの作成
-    if not os.path.isdir(file_name + "/image"):
-        os.mkdir(file_name + "/image")
+    # #image用フォルダの作成
+    # if not os.path.isdir(file_name + "/image"):
+    #     os.mkdir(file_name + "/image")
     
-    #データをimageに書き出し    
-    for i in range(len(logged_list)):
-        fig, ax = plt.subplots()
-        ax.plot(df[logged_list[i]], "o-", markersize=0.1, color='Red')
-        ax.set_title(logged_list[i])
-        fig.tight_layout()
-        fig.savefig(file_name + "/image/" + logged_list[i] + ".png")
+    # #データをimageに書き出し    
+    # for i in range(len(logged_list)):
+    #     fig, ax = plt.subplots()
+    #     ax.plot(df[logged_list[i]], "o-", markersize=0.1, color='Red')
+    #     ax.set_title(logged_list[i])
+    #     fig.tight_layout()
+    #     fig.savefig(file_name + "/image/" + logged_list[i] + ".png")
 
-    pdf_path = file_name + "/" + file_name + ".pdf"
-    image_path = file_name + "/image/"
-    extension = ".png"
+    # pdf_path = file_name + "/" + file_name + ".pdf"
+    # image_path = file_name + "/image/"
+    # extension = ".png"
 
-    with open(pdf_path,"wb") as f:
-        # 画像フォルダの中にあるPNGファイルを取得し配列に追加、バイナリ形式でファイルに書き込む
-        f.write(img2pdf.convert([Image.open(image_path+j).filename for j in os.listdir(image_path)if j.endswith(extension)]))
+    # with open(pdf_path,"wb") as f:
+    #     # 画像フォルダの中にあるPNGファイルを取得し配列に追加、バイナリ形式でファイルに書き込む
+    #     f.write(img2pdf.convert([Image.open(image_path+j).filename for j in os.listdir(image_path)if j.endswith(extension)]))
     
     # binファイルのコピー
     shutil.copyfile(log_path,file_name + "/" + log_path.split('/')[-1])
