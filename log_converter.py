@@ -4,7 +4,6 @@ import mc_log_ui
 import argparse
 import metayaml
 import re
-import numpy
 import pandas as pd
 
 def expand_str_to_list (input_str):
@@ -18,7 +17,7 @@ def main():
     # args
     parser = argparse.ArgumentParser(description='Convert data from mc_rtc log to hrpsys log')
     parser.add_argument('-f', type=str, help='input file', metavar='file', required=True)
-    parser.add_argument('--plot', type=str, help='plot configure file', metavar='file')
+    parser.add_argument('--plot', type=str, help='plot configure file', metavar='file', required=True)
     args = parser.parse_args()
 
     if args.plot is not None:
@@ -26,7 +25,6 @@ def main():
 
     #key : expand_str
     file_expand_name = plot_dict.keys()
-    # print(file_expand_name)
         
     #import file name is log
     topic_list = {}
