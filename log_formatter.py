@@ -33,6 +33,8 @@ def main():
         "CentroidalManager_IRSL_LOG_ControlRobot_orientation",
         "CentroidalManager_IRSL_LOG_RealRobot_position",
         "CentroidalManager_IRSL_LOG_RealRobot_orientation",
+        "CentroidalManager_IRSL_LOG_PlannedRobot_dcm",
+        "CentroidalManager_IRSL_LOG_RealRobot_dcm",
         "CentroidalManager_CoM_planned",
         "CentroidalManager_CoM_controlRobot",
         "CentroidalManager_CoM_realRobot_com",
@@ -58,7 +60,8 @@ def main():
     ]
 
     qout_param = [
-        "qOut",
+        "CentroidalManager_IRSL_LOG_ControlRobot_q",
+        "CentroidalManager_IRSL_LOG_RealRobot_q",
     ]
     
     # add "x", "y", "z" to the logged_list
