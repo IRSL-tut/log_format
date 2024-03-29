@@ -50,9 +50,12 @@ def main():
     for topic in topic_list.keys():
         df = pd.DataFrame(index=mc_rtc_log["t"], columns=topic_list[topic])
         for key in topic_list[topic]:
-            df[key] = mc_rtc_log[key]
-        df.to_csv(args.f.split('.')[0] + "." + topic , sep=' ', na_rep= 0, index=True, header=False)
-        df_list[topic] = df
+            if key in mc_rtc_log.keys():
+                df[key] = mc_rtc_log[key]
+                
+        if not df.empty:
+            df.to_csv(args.f.split('.')[0] + "." + topic , sep=' ', na_rep= 0, index=True, header=False)
+            df_list[topic] = df
     
 if __name__ == "__main__":
     main()
