@@ -6,6 +6,10 @@ import metayaml
 import re
 import pandas as pd
 
+
+def has_duplicates(l):
+    return len(l) != len(set(l))
+
 def expand_str_to_list (input_str):
     parsed = re.match("([0-9]+)-([0-9]+)", input_str)
     if parsed:
@@ -17,28 +21,38 @@ def main():
     # args
     parser = argparse.ArgumentParser(description='Convert data from mc_rtc log to hrpsys log')
     parser.add_argument('-f', type=str, help='input file', metavar='file', required=True)
-    parser.add_argument('--plot', type=str, help='plot configure file', metavar='file', required=True)
+    parser.add_argument('--plot', type=str, help='plot configure file', metavar='file')
     args = parser.parse_args()
 
-    if args.plot is not None:
-        plot_dict = metayaml.read(args.plot )
-
-    #key : expand_str
-    file_expand_name = plot_dict.keys()
-        
-    #import file name is log
-    topic_list = {}
-    for i in file_expand_name:
-        topic_list[i] = (plot_dict[i]['data'][0]['log'])
-
+    # load log file
     mc_rtc_log = mc_log_ui.read_log(args.f)
-    for topic in topic_list.values():
-        mc_rtc_keys = [key for key in mc_rtc_log.keys() if topic in key]
-        if mc_rtc_keys:
-            df = pd.DataFrame(index=mc_rtc_log["t"], columns=mc_rtc_keys)
-            for key in mc_rtc_keys:
-                df[key] = mc_rtc_log[key]
-            df.to_csv(args.f.split('.')[0] + "." + topic , sep=' ', na_rep= 0)
+    
+    # mc_rtc logのtopic名を取得
+    topic_list = {}
+    # mc_rtc topic list
+    if args.plot:
+        plot_dict = metayaml.read(args.plot)
+        file_expand_name = plot_dict.keys()
+        for i in file_expand_name:
+            topic_list[plot_dict[i]['data'][0]['log']] = [key for key in mc_rtc_log.keys() if plot_dict[i]['data'][0]['log'] in key]
+    else:
+        for keys in mc_rtc_log.keys():
+            key = keys.rsplit('_',1)
+            if key[0] == 't':
+                continue
+            else:
+                if key[0] in topic_list.keys():
+                    topic_list[key[0]].append(keys)
+                else:
+                    topic_list[key[0]] = [keys]
 
+    df_list = {}
+    for topic in topic_list.keys():
+        df = pd.DataFrame(index=mc_rtc_log["t"], columns=topic_list[topic])
+        for key in topic_list[topic]:
+            df[key] = mc_rtc_log[key]
+        df.to_csv(args.f.split('.')[0] + "." + topic , sep=' ', na_rep= 0, index=True, header=False)
+        df_list[topic] = df
+    
 if __name__ == "__main__":
     main()
