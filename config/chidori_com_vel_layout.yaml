@@ -3,11 +3,15 @@ main:
     legends:
       - { key: CM_CoM_controlRobot_vel, id: [0] }
       - { key: CM_CoM_realRobot_vel,    id: [0] }
+      - { key: CM_CoM_controlRobot, id: [0] }
+      - { key: CM_CoM_realRobot,    id: [0] }
     bottom_label:
   CoM_Y:
     legends:
       - { key: CM_CoM_controlRobot_vel, id: [1] }
       - { key: CM_CoM_realRobot_vel,    id: [1] }
+      - { key: CM_CoM_controlRobot, id: [1] }
+      - { key: CM_CoM_realRobot,    id: [1] }
     bottom_label:
   Pitch(Pos):
     legends:
