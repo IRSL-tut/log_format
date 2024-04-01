@@ -2,3 +2,4 @@
 *.pdf
 *.csv
 /mc-*
+log_generator.py

@@ -22,6 +22,7 @@ def main():
     parser = argparse.ArgumentParser(description='Convert data from mc_rtc log to hrpsys log')
     parser.add_argument('-f', type=str, help='input file', metavar='file', required=True)
     parser.add_argument('--plot', type=str, help='plot configure file', metavar='file')
+    parser.add_argument('--output', type=str, help='output file', metavar='file')
     args = parser.parse_args()
 
     # load log file

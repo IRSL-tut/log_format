@@ -90,6 +90,19 @@ CM_DCM_diff:
   data:
     - { log: CentroidalManager_IRSL_LOG_RealRobot_dcm, column: [0-2] }
     - { log: CentroidalManager_IRSL_LOG_PlannedRobot_dcm, column: [0-2] }
+CM_QP_eval:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_QP_CoMTask, column: [0-2] }
+BaseOri_QP_eval:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_QP_BaseTask, column: [0-2] }
+FT_Left_QP_eval:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_QP_FootTask_Left, column: [0-5] }
+FT_Right_QP_eval:
+  data:
+    - { log: CentroidalManager_IRSL_LOG_QP_FootTask_Right, column: [0-5] }
+
 FT_Left_filteredMeasuredWrench:
   data:
     - { log: FootTask_Left_filteredMeasuredWrench, column: [0-5] }
@@ -144,6 +157,7 @@ Control_Left_FootPos:
 Control_Right_FootPos:
   data:
     - { log: Control_Right_FootPos, column: [0-5] }
+
 #abc_refZmp:
 #  func: plot_add
 #  data:
