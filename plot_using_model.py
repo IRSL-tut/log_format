@@ -4,7 +4,7 @@
 ####
 #
 # exec(open('log_format/plot_using_model.py').read())
-# setupChidori()
+# setupRobot()
 # dumpLogFiles(prefix, directory=filedir, robot=robot_c)
 # calcLinkMovements(robot_r, lst_tm, lst_real_pos, lst_real_rot, lst_real_q, time=44.37)
 # calcLinkMovements(robot_c, lst_tm, lst_ctrl_pos, lst_ctrl_rot, lst_ctrl_q, time=44.37)
@@ -119,7 +119,7 @@ def calcLinkMovements(robot, lst_tm, lst_pos, lst_rot, lst_q, time=None, index=1
     robot.robot.calcForwardKinematics(True)
     robot.robot.calcCenterOfMass()
 
-def setupRoboti(modelFile='CHIDORI/model/CHIDORImain.wrl'):
+def setupRobot(modelFile='CHIDORI/model/CHIDORImain.wrl'):
     global r_ctrl, r_real, robot_c, robot_r
     # exec(open('/choreonoid_ws/install/share/irsl_choreonoid/sample/irsl_import.py').read())
     ## choreonoid check
