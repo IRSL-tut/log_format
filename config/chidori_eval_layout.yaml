@@ -1,0 +1,65 @@
+main:
+###    newline: false
+  eval:
+    legends:
+      # - { key: FSM_posture_chidori_eval, id: [0] , label: 0 }
+      # - { key: FSM_posture_chidori_eval, id: [1] , label: 1 }
+      # - { key: FSM_posture_chidori_eval, id: [2] , label: 2 }
+      # - { key: FSM_posture_chidori_eval, id: [3] , label: 3 }
+      # - { key: FSM_posture_chidori_eval, id: [4] , label: 4 }
+      # - { key: FSM_posture_chidori_eval, id: [5] , label: 5 }
+      - { key: FSM_posture_chidori_eval, id: [6] , label: 6 }
+      - { key: FSM_posture_chidori_eval, id: [7] , label: 7 }
+      - { key: FSM_posture_chidori_eval, id: [8] , label: 8 }
+      - { key: FSM_posture_chidori_eval, id: [9] , label: 9 }
+      - { key: FSM_posture_chidori_eval, id: [10], label: 10 }
+      - { key: FSM_posture_chidori_eval, id: [11], label: 11 }
+      # - { key: FSM_posture_chidori_eval, id: [12], label: 12 }
+      # - { key: FSM_posture_chidori_eval, id: [13], label: 13 }
+      # - { key: FSM_posture_chidori_eval, id: [14], label: 14 }
+      # - { key: FSM_posture_chidori_eval, id: [15], label: 15 }
+      # - { key: FSM_posture_chidori_eval, id: [16], label: 16 }
+      # - { key: FSM_posture_chidori_eval, id: [17], label: 17 }
+    bottom_label:
+  eval2:
+    legends:
+      # - { key: FSM_posture_chidori_eval, id: [0] , label: 0 }
+      # - { key: FSM_posture_chidori_eval, id: [1] , label: 1 }
+      # - { key: FSM_posture_chidori_eval, id: [2] , label: 2 }
+      # - { key: FSM_posture_chidori_eval, id: [3] , label: 3 }
+      # - { key: FSM_posture_chidori_eval, id: [4] , label: 4 }
+      # - { key: FSM_posture_chidori_eval, id: [5] , label: 5 }
+      # - { key: FSM_posture_chidori_eval, id: [6] , label: 6 }
+      # - { key: FSM_posture_chidori_eval, id: [7] , label: 7 }
+      # - { key: FSM_posture_chidori_eval, id: [8] , label: 8 }
+      # - { key: FSM_posture_chidori_eval, id: [9] , label: 9 }
+      # - { key: FSM_posture_chidori_eval, id: [10], label: 10 }
+      # - { key: FSM_posture_chidori_eval, id: [11], label: 11 }
+      - { key: FSM_posture_chidori_eval, id: [12], label: 12 }
+      - { key: FSM_posture_chidori_eval, id: [13], label: 13 }
+      - { key: FSM_posture_chidori_eval, id: [14], label: 14 }
+      - { key: FSM_posture_chidori_eval, id: [15], label: 15 }
+      - { key: FSM_posture_chidori_eval, id: [16], label: 16 }
+      - { key: FSM_posture_chidori_eval, id: [17], label: 17 }
+    bottom_label:
+  eval3:
+    legends:
+      - { key: FSM_posture_chidori_eval, id: [0] , label: 0 }
+      - { key: FSM_posture_chidori_eval, id: [1] , label: 1 }
+      - { key: FSM_posture_chidori_eval, id: [2] , label: 2 }
+      - { key: FSM_posture_chidori_eval, id: [3] , label: 3 }
+      - { key: FSM_posture_chidori_eval, id: [4] , label: 4 }
+      - { key: FSM_posture_chidori_eval, id: [5] , label: 5 }
+      # - { key: FSM_posture_chidori_eval, id: [6] , label: 6 }
+      # - { key: FSM_posture_chidori_eval, id: [7] , label: 7 }
+      # - { key: FSM_posture_chidori_eval, id: [8] , label: 8 }
+      # - { key: FSM_posture_chidori_eval, id: [9] , label: 9 }
+      # - { key: FSM_posture_chidori_eval, id: [10], label: 10 }
+      # - { key: FSM_posture_chidori_eval, id: [11], label: 11 }
+      # - { key: FSM_posture_chidori_eval, id: [12], label: 12 }
+      # - { key: FSM_posture_chidori_eval, id: [13], label: 13 }
+      # - { key: FSM_posture_chidori_eval, id: [14], label: 14 }
+      # - { key: FSM_posture_chidori_eval, id: [15], label: 15 }
+      # - { key: FSM_posture_chidori_eval, id: [16], label: 16 }
+      # - { key: FSM_posture_chidori_eval, id: [17], label: 17 }
+    bottom_label:

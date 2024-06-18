@@ -1,31 +1,51 @@
 main:
-  q:
+##  q:
+##    legends:
+##      - { key: CM_ControlRobot_q, id: [0] }
+##      - { key: CM_ControlRobot_q, id: [1] }
+##      - { key: CM_ControlRobot_q, id: [2] }
+##      - { key: CM_ControlRobot_q, id: [3] }
+##      - { key: CM_ControlRobot_q, id: [4] }
+##      - { key: CM_ControlRobot_q, id: [5] }
+##      - { key: CM_ControlRobot_q, id: [6] }
+##      - { key: CM_ControlRobot_q, id: [7] }
+##      - { key: CM_ControlRobot_q, id: [8] }
+##      - { key: CM_ControlRobot_q, id: [9] }
+##      - { key: CM_ControlRobot_q, id: [10] }
+##      - { key: CM_ControlRobot_q, id: [11] }
+##    bottom_label:
+  q_real:
     legends:
-      - { key: CM_ControlRobot_q, id: [0] }
-      - { key: CM_ControlRobot_q, id: [1] }
-      - { key: CM_ControlRobot_q, id: [2] }
+      - { key: CM_RealRobot_q, id: [3] }
+      - { key: CM_RealRobot_q, id: [9] }
       - { key: CM_ControlRobot_q, id: [3] }
-      - { key: CM_ControlRobot_q, id: [4] }
-      - { key: CM_ControlRobot_q, id: [5] }
-      - { key: CM_ControlRobot_q, id: [6] }
-      - { key: CM_ControlRobot_q, id: [7] }
-      - { key: CM_ControlRobot_q, id: [8] }
       - { key: CM_ControlRobot_q, id: [9] }
-      - { key: CM_ControlRobot_q, id: [10] }
-      - { key: CM_ControlRobot_q, id: [11] }
+      #
     bottom_label:
-  dq:
-    legends:
-      - { key: CM_ControlRobot_dq, id: [0] }
-      - { key: CM_ControlRobot_dq, id: [1] }
-      - { key: CM_ControlRobot_dq, id: [2] }
-      - { key: CM_ControlRobot_dq, id: [3] }
-      - { key: CM_ControlRobot_dq, id: [4] }
-      - { key: CM_ControlRobot_dq, id: [5] }
-      - { key: CM_ControlRobot_dq, id: [6] }
-      - { key: CM_ControlRobot_dq, id: [7] }
-      - { key: CM_ControlRobot_dq, id: [8] }
-      - { key: CM_ControlRobot_dq, id: [9] }
-      - { key: CM_ControlRobot_dq, id: [10] }
-      - { key: CM_ControlRobot_dq, id: [11] }
-    bottom_label:
+##->  q_control:
+##->    legends:
+##->      - { key: CM_ControlRobot_q, id: [3] }
+##->      - { key: CM_ControlRobot_q, id: [9] }
+##->    bottom_label:
+##->  dq:
+##->    legends:
+##->      - { key: CM_RealRobot_dq, id: [3] }
+##->      - { key: CM_RealRobot_dq, id: [9] }
+##->      - { key: CM_ControlRobot_dq, id: [3] }
+##->      - { key: CM_ControlRobot_dq, id: [9] }
+##->    bottom_label:
+##  dq:
+##    legends:
+##      - { key: CM_ControlRobot_dq, id: [0] }
+##      - { key: CM_ControlRobot_dq, id: [1] }
+##      - { key: CM_ControlRobot_dq, id: [2] }
+##      - { key: CM_ControlRobot_dq, id: [3] }
+##      - { key: CM_ControlRobot_dq, id: [4] }
+##      - { key: CM_ControlRobot_dq, id: [5] }
+##      - { key: CM_ControlRobot_dq, id: [6] }
+##      - { key: CM_ControlRobot_dq, id: [7] }
+##      - { key: CM_ControlRobot_dq, id: [8] }
+##      - { key: CM_ControlRobot_dq, id: [9] }
+##      - { key: CM_ControlRobot_dq, id: [10] }
+##      - { key: CM_ControlRobot_dq, id: [11] }
+##    bottom_label:

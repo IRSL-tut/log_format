@@ -1,0 +1,25 @@
+main:
+  q:
+    legends:
+      - { key: CM_RealRobot_q, id: [3] }
+      - { key: CM_RealRobot_q, id: [9] }
+      - { key: CM_ControlRobot_q, id: [3] }
+      - { key: CM_ControlRobot_q, id: [9] }
+    bottom_label:
+  gt_q:
+    legends:
+     # - { key: GT_q, id: [0] }
+     # - { key: GT_q, id: [1] }
+     # - { key: GT_q, id: [2] }
+      - { key: GT_q, id: [3] }
+     # - { key: GT_q, id: [4] }
+     # - { key: GT_q, id: [5] }
+     # - { key: GT_q, id: [6] }
+     # - { key: GT_q, id: [7] }
+     # - { key: GT_q, id: [8] }
+      - { key: GT_q, id: [9] }
+     # - { key: GT_q, id: [10] }
+     # - { key: GT_q, id: [11] }
+      - { key: CM_RealRobot_q, id: [3] }
+      - { key: CM_RealRobot_q, id: [9] }
+    bottom_label:

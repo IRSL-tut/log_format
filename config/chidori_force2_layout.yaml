@@ -1,36 +1,36 @@
 main:
   M_x:
     legends:
-      - { key: FT_Left_filteredMeasuredWrench,  id: [3] }
-      - { key: FT_Right_filteredMeasuredWrench, id: [3] }
-      - { key: FT_Left_targetWrench,  id: [3] }
-      - { key: FT_Right_targetWrench, id: [3] }
-    bottom_label:
-  M_y:
-    legends:
-      - { key: FT_Left_filteredMeasuredWrench,  id: [4] }
-      - { key: FT_Right_filteredMeasuredWrench, id: [4] }
-      - { key: FT_Left_targetWrench,  id: [4] }
-      - { key: FT_Right_targetWrench, id: [4] }
-    bottom_label:
-  F_z:
-    legends:
-      - { key: FT_Left_filteredMeasuredWrench,  id: [2] }
-      - { key: FT_Right_filteredMeasuredWrench, id: [2] }
-      - { key: FT_Left_targetWrench,  id: [2] }
-      - { key: FT_Right_targetWrench, id: [2] }
-    bottom_label:
-  F_x:
-    legends:
       - { key: FT_Left_filteredMeasuredWrench,  id: [0] }
       - { key: FT_Right_filteredMeasuredWrench, id: [0] }
       - { key: FT_Left_targetWrench,  id: [0] }
       - { key: FT_Right_targetWrench, id: [0] }
     bottom_label:
-  F_y:
+  M_y:
     legends:
       - { key: FT_Left_filteredMeasuredWrench,  id: [1] }
       - { key: FT_Right_filteredMeasuredWrench, id: [1] }
       - { key: FT_Left_targetWrench,  id: [1] }
       - { key: FT_Right_targetWrench, id: [1] }
+    bottom_label:
+  F_z:
+    legends:
+      - { key: FT_Left_filteredMeasuredWrench,  id: [5] }
+      - { key: FT_Right_filteredMeasuredWrench, id: [5] }
+      - { key: FT_Left_targetWrench,  id: [5] }
+      - { key: FT_Right_targetWrench, id: [5] }
+    bottom_label:
+  F_x:
+    legends:
+      - { key: FT_Left_filteredMeasuredWrench,  id: [3] }
+      - { key: FT_Right_filteredMeasuredWrench, id: [3] }
+      - { key: FT_Left_targetWrench,  id: [3] }
+      - { key: FT_Right_targetWrench, id: [3] }
+    bottom_label:
+  F_y:
+    legends:
+      - { key: FT_Left_filteredMeasuredWrench,  id: [4] }
+      - { key: FT_Right_filteredMeasuredWrench, id: [4] }
+      - { key: FT_Left_targetWrench,  id: [4] }
+      - { key: FT_Right_targetWrench, id: [4] }
     bottom_label:
