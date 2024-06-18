@@ -3,6 +3,8 @@
 #
 ####
 #
+# prefix='mc-control-BaselineWalkingController-2024-04-02-19-37-54'
+# filedir='temps'
 # exec(open('log_format/plot_using_model.py').read())
 # setupRobot()
 # dumpLogFiles(prefix, directory=filedir, robot=robot_c)
@@ -11,10 +13,36 @@
 #targetTime=38.0
 #prefix='chidori_mj00_0.33m_1.0sec_Bgain1.0'
 exec(open('/choreonoid_ws/install/share/irsl_choreonoid/sample/irsl_import.py').read())
+##prefix='chidori_mj00_0.33m_1.0sec'
+##filedir='logs/{}'.format(prefix)
 
-targetTime=44.6
-prefix='chidori_mj00_0.33m_1.0sec'
-filedir='logs/{}'.format(prefix)
+def loadSuffix(suffix, prefix, filedir):
+    n_str = '{}/{}.{}'.format(filedir, prefix, suffix)
+    f = open(n_str, mode='r')
+    lst_ = []
+    l_str = f.readline()
+    while l_str:
+        lst_.append( npa( [ float(v) for v in l_str.split(' ')[1:] ] ))
+        l_str = f.readline()
+    f.close()
+    return lst_
+
+def dumpLogFile(prefix, robot, suffix='suffix', directory=None):
+    if directory is None:
+        directory = prefix
+
+    fn_ = '{}/{}.{}'.format(directory, prefix, suffix)
+
+    f_  = open(fn_,  mode='w')
+
+    ## write Initial data
+    print('0   0 0 0 0 0 0', file=f_)
+
+    size=len(lst_tm)
+    for i in range(size-1):
+        idx = i+1
+
+    f_.close()
 
 #
 n_ctrl_rot = '{}/{}.{}'.format(filedir, prefix, 'CentroidalManager_IRSL_LOG_ControlRobot_orientation')
@@ -25,8 +53,7 @@ n_ctrl_q   = '{}/{}.{}'.format(filedir, prefix, 'CentroidalManager_IRSL_LOG_Cont
 n_real_rot = '{}/{}.{}'.format(filedir, prefix, 'CentroidalManager_IRSL_LOG_RealRobot_orientation')
 n_real_pos = '{}/{}.{}'.format(filedir, prefix, 'CentroidalManager_IRSL_LOG_RealRobot_position')
 n_real_q   = '{}/{}.{}'.format(filedir, prefix, 'CentroidalManager_IRSL_LOG_RealRobot_q')
-#
-lineNumber = int(targetTime*500)
+
 #
 f_ctrl_rot = open(n_ctrl_rot, mode='r')
 f_ctrl_pos = open(n_ctrl_pos, mode='r')
