@@ -35,24 +35,45 @@ CM_Robot_rot_real_sub_control:
   data:
     - { log: CentroidalManager_IRSL_LOG_RealRobot_orientation, column: [0-2] }
     - { log: CentroidalManager_IRSL_LOG_ControlRobot_orientation, column: [0-2] }
+CM_CoM_MPC:
+  data:
+    - { log: CentroidalManager_CoM_MPC, column: [0-2] }
 CM_CoM_planned:
   data:
-    - { log: CentroidalManager_CoM_planned, column: [0-2] }
+    - { log: CentroidalManager_CoM_planned_com, column: [0-2] }
 CM_CoM_planned_vel:
+  data:
+    - { log: CentroidalManager_CoM_planned_comVelocity, column: [0-2] }
+CM_CoM_planned_acc:
+  data:
+    - { log: CentroidalManager_CoM_planned_comAcceleration, column: [0-2] }
+CM_CoM_planned_dcom:
   func: plot_velocity
   data:
-    - { log: CentroidalManager_CoM_planned, column: [0-2] }
+    - { log: CentroidalManager_CoM_planned_com, column: [0-2] }
 CM_CoM_controlRobot:
   data:
-    - { log: CentroidalManager_CoM_controlRobot, column: [0-2] }
+    - { log: CentroidalManager_CoM_controlRobot_com, column: [0-2] }
 CM_CoM_controlRobot_vel:
+  data:
+    - { log: CentroidalManager_CoM_controlRobot_comVelocity, column: [0-2] }
+CM_CoM_controlRobot_acc:
+  data:
+    - { log: CentroidalManager_CoM_controlRobot_comAcceleration, column: [0-2] }
+CM_CoM_controlRobot_dcom:
   func: plot_velocity
   data:
-    - { log: CentroidalManager_CoM_controlRobot, column: [0-2] }
+    - { log: CentroidalManager_CoM_controlRobot_com, column: [0-2] }
 CM_CoM_realRobot:
   data:
     - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
 CM_CoM_realRobot_vel:
+  data:
+    - { log: CentroidalManager_CoM_realRobot_comVelocity, column: [0-2] }
+CM_CoM_realRobot_acc:
+  data:
+    - { log: CentroidalManager_CoM_realRobot_comAcceleration, column: [0-2] }
+CM_CoM_realRobot_dcom:
   func: plot_velocity
   data:
     - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
@@ -60,7 +81,7 @@ CM_CoM_real_sub_control:
   func: plot_diff
   data:
     - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
-    - { log: CentroidalManager_CoM_controlRobot, column: [0-2] }
+    - { log: CentroidalManager_CoM_controlRobot_com, column: [0-2] }
 CM_CoM_realRobot_vel:
   data:
     - { log: CentroidalManager_CoM_realRobot_comVelocity, column: [0-2] }
@@ -157,6 +178,21 @@ Control_Left_FootPos:
 Control_Right_FootPos:
   data:
     - { log: Control_Right_FootPos, column: [0-5] }
+FSM_posture_chidori_eval:
+    data:
+    - { log: FSM_posture_chidori_eval, column: [0-17] }
+QP_BaseTask:
+    data:
+    - { log: CentroidalManager_IRSL_LOG_QP_BaseTask, column: [0-2] }
+QP_CoMTask:
+    data:
+    - { log: CentroidalManager_IRSL_LOG_QP_CoMTask, column: [0-2] }
+QP_FootTask_Left:
+    data:
+    - { log: CentroidalManager_IRSL_LOG_QP_FootTask_Left, column: [0-5] }
+QP_FootTask_Right:
+    data:
+    - { log: CentroidalManager_IRSL_LOG_QP_FootTask_Right, column: [0-5] }
 
 #abc_refZmp:
 #  func: plot_add
