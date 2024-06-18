@@ -1,6 +1,6 @@
 exec(open('/choreonoid_ws/install/share/irsl_choreonoid/sample/irsl_import.py').read())
 
-def setupChidori(modelFile='CHIDORI/model/CHIDORImain.wrl', name = 'CHIDORI'):
+def setupChidori(modelFile='chidori/CHIDORI/model/CHIDORImain.wrl', name = 'CHIDORI'):
     r_ = ru.loadRobotItem(modelFile, name=name)
     mdl_ = RobotModel(r_)
     mdl_.registerEndEffector('rleg', ## end-effector
@@ -30,7 +30,7 @@ def setupChidori(modelFile='CHIDORI/model/CHIDORImain.wrl', name = 'CHIDORI'):
 # robot = setupChidori()
 #
 ### down waist(up foot)
-# robot.angleVector(fv(0, 0, 0, 0, 0, 0,  0, 0, 0, 0, 0, 0))
+# robot.angleVector(fv(0, 0, -0.01, 0.02, -0.01, 0,  0, 0, -0.01, 0.02, -0.01, 0))
 # robot.rleg.move(fv(0.0, 0.0, 0.1))
 # robot.lleg.move(fv(0.0, 0.0, 0.1))
 # robot.fixLegToCoords(coordinates())
@@ -39,4 +39,4 @@ def setupChidori(modelFile='CHIDORI/model/CHIDORImain.wrl', name = 'CHIDORI'):
 # robot.fixLegToCoords(coordinates())
 # robot.rleg.move(fv(0.005, 0, 0))
 # robot.lleg.move(fv(0.005, 0, 0))
-# robot.centroid -> 0 0 xxx
+# robot.centerOfMass -> 0 0 xxx
