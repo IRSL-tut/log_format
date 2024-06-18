@@ -24,6 +24,7 @@ def main():
     parser.add_argument('-d', type=str, help='output dir', metavar='file')
     parser.add_argument('-p', type=str, help='prefix', metavar='file')
     parser.add_argument('--plot', type=str, help='plot configure file', metavar='file')
+    parser.add_argument('--output', type=str, help='output file', metavar='file')
     args = parser.parse_args()
 
     # load log file
