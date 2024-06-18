@@ -9,6 +9,7 @@ main:
     legends:
       - { key: CM_CoM_realRobot,    id: [1] }
       - { key: GT_CoM,              id: [1] }
+      - { key: GT_dCoM,             id: [0] }
     bottom_label:
   CoM_Z:
     legends:

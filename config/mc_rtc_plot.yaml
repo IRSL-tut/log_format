@@ -15,6 +15,15 @@ CM_ControlRobot_dq:
 CM_RealRobot_pos:
   data:
     - { log: CentroidalManager_IRSL_LOG_RealRobot_position, column: [0-2] }
+GT_Root_pos_diff:
+  func: plot_diff
+  data:
+    - { log: CentroidalManager_IRSL_LOG_RealRobot_position, column: [0-2] }
+    - { log: GT_rootPos, column: [0-2] }
+CM_RealRobot_dpos:
+  func: plot_velocity
+  data:
+    - { log: CentroidalManager_IRSL_LOG_RealRobot_position, column: [0-2] }
 CM_RealRobot_rot:
   data:
     - { log: CentroidalManager_IRSL_LOG_RealRobot_orientation, column: [0-2] }
@@ -67,6 +76,11 @@ CM_CoM_controlRobot_dcom:
 CM_CoM_realRobot:
   data:
     - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
+CM_CoM_realRobot_com_diff:
+  func: plot_diff
+  data:
+    - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
+    - { log: GT_CoM, column: [0-2] }
 CM_CoM_realRobot_vel:
   data:
     - { log: CentroidalManager_CoM_realRobot_comVelocity, column: [0-2] }
@@ -77,17 +91,36 @@ CM_CoM_realRobot_dcom:
   func: plot_velocity
   data:
     - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
-CM_CoM_real_sub_control:
+CM_CoM_realRobot_dvel:
+  func: plot_velocity
+  data:
+    - { log: CentroidalManager_CoM_realRobot_comVelocity, column: [0-2] }
+CM_CoM_real_sub_planned:
   func: plot_diff
   data:
     - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
+    - { log: CentroidalManager_CoM_planned_com, column: [0-2] }
+CM_CoM_control_sub_planned:
+  func: plot_diff
+  data:
     - { log: CentroidalManager_CoM_controlRobot_com, column: [0-2] }
+    - { log: CentroidalManager_CoM_planned_com, column: [0-2] }
+CM_CoM_vel_control_sub_planned:
+  func: plot_diff
+  data:
+    - { log: CentroidalManager_CoM_controlRobot_comVelocity, column: [0-2] }
+    - { log: CentroidalManager_CoM_planned_comVelocity, column: [0-2] }
 CM_CoM_realRobot_vel:
   data:
     - { log: CentroidalManager_CoM_realRobot_comVelocity, column: [0-2] }
 CM_CoM_realRobot_acc:
   data:
     - { log: CentroidalManager_CoM_realRobot_comAcceleration, column: [0-2] }
+CM_CoM_vel_real_sub_planned:
+  func: plot_diff
+  data:
+    - { log: CentroidalManager_CoM_realRobot_comVelocity, column: [0-2] }
+    - { log: CentroidalManager_CoM_planned_comVelocity, column: [0-2] }
 CM_ZMP_ref:
   data:
     - { log: CentroidalManager_ZMP_ref, column: [0-2] }
@@ -100,13 +133,23 @@ CM_ZMP_planned:
 CM_ZMP_measured:
   data:
     - { log: CentroidalManager_ZMP_measured, column: [0-2] }
+CM_ZMP_control_sub_planned:
+  func: plot_diff
+  data:
+    - { log: CentroidalManager_ZMP_control, column: [0-2] }
+    - { log: CentroidalManager_ZMP_planned, column: [0-2] }
+CM_CoM_real_sub_ZMP_ref:
+  func: plot_diff
+  data:
+    - { log: CentroidalManager_CoM_realRobot_com, column: [0-2] }
+    - { log: CentroidalManager_ZMP_ref, column: [0-2] }
 CM_DCM_planned:
   data:
     - { log: CentroidalManager_IRSL_LOG_PlannedRobot_dcm, column: [0-2] }
 CM_DCM_real:
   data:
     - { log: CentroidalManager_IRSL_LOG_RealRobot_dcm, column: [0-2] }
-CM_DCM_diff:
+CM_DCM_real_sub_planned:
   func: plot_diff
   data:
     - { log: CentroidalManager_IRSL_LOG_RealRobot_dcm, column: [0-2] }
@@ -123,10 +166,21 @@ FT_Left_targetWrench:
 FT_Right_targetWrench:
   data:
     - { log: FootTask_Right_targetWrench, column: [0-5] }
+GT_q:
+  data:
+    - { log: GT_angles, column: [0-11] }
 GT_CoM:
   data:
     - { log: GT_com, column: [0-2] }
+GT_dCoM:
+  func: plot_velocity
+  data:
+    - { log: GT_com, column: [0-2] }
 GT_Root_pos:
+  data:
+    - { log: GT_rootPos, column: [0-5] }
+GT_Root_dpos:
+  func: plot_velocity
   data:
     - { log: GT_rootPos, column: [0-5] }
 GT_Rfoot_pos:

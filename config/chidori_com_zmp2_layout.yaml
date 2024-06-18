@@ -1,0 +1,28 @@
+main:
+  CoM/ZMP_X:
+    legends:
+      #- { key: CM_ZMP_ref,      id: [0] }
+      - { key: CM_ZMP_control,  id: [0] }
+      - { key: CM_ZMP_planned,  id: [0] }
+      - { key: CM_ZMP_measured, id: [0] }
+      #- { key: CM_CoM_planned,      id: [0] }
+      #- { key: CM_CoM_controlRobot, id: [0] }
+      - { key: CM_CoM_realRobot,    id: [0] }
+      #- { key: GT_CoM,              id: [0] }
+      #- { key: CM_CoM_real_sub_planned, id: [0] }
+      #- { key: CM_CoM_MPC,    id: [0] }
+      #- { key: CM_CoM_real_sub_ZMP_ref, id: [0] }
+    bottom_label:
+  CoM/ZMP_Y:
+    legends:
+      #- { key: CM_ZMP_ref,      id: [1] }
+      - { key: CM_ZMP_control,  id: [1] }
+      - { key: CM_ZMP_planned,  id: [1] }
+      - { key: CM_ZMP_measured, id: [1] }
+      #- { key: CM_CoM_real_sub_control, id: [1] }
+      #- { key: CM_CoM_planned,      id: [1] }
+      #- { key: CM_CoM_controlRobot, id: [1] }
+      - { key: CM_CoM_realRobot,    id: [1] }
+      #- { key: GT_CoM,              id: [1] }
+      #- { key: CM_CoM_planned,      id: [1] }
+    bottom_label:

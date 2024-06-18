@@ -1,0 +1,28 @@
+main:
+###    newline: false
+  QP_BaseTask:
+    legends:
+      - { key: QP_BaseTask, id: [0] , label: 0 }
+      - { key: QP_BaseTask, id: [1] , label: 1 }
+      - { key: QP_BaseTask, id: [2] , label: 2 }
+  QP_CoMTask:
+    legends:
+      - { key: QP_CoMTask, id: [0] , label: 0 }
+      - { key: QP_CoMTask, id: [1] , label: 1 }
+      - { key: QP_CoMTask, id: [2] , label: 2 }
+  QP_FootTask_Left:
+    legends:
+      - { key: QP_FootTask_Left, id: [0] , label: 0 }
+      - { key: QP_FootTask_Left, id: [1] , label: 1 }
+      - { key: QP_FootTask_Left, id: [2] , label: 2 }
+      - { key: QP_FootTask_Left, id: [3] , label: 3 }
+      - { key: QP_FootTask_Left, id: [4] , label: 4 }
+      - { key: QP_FootTask_Left, id: [5] , label: 5 }
+  QP_FootTask_Right:
+    legends:
+      - { key: QP_FootTask_Right, id: [0] , label: 0 }
+      - { key: QP_FootTask_Right, id: [1] , label: 1 }
+      - { key: QP_FootTask_Right, id: [2] , label: 2 }
+      - { key: QP_FootTask_Right, id: [3] , label: 3 }
+      - { key: QP_FootTask_Right, id: [4] , label: 4 }
+      - { key: QP_FootTask_Right, id: [5] , label: 5 }
