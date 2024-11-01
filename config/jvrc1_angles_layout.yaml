@@ -1,0 +1,19 @@
+main:
+  Right_Leg:
+    legends:
+      - { key: Q_Angles, id: [0], label: R_HIP_P  }
+      - { key: Q_Angles, id: [1], label: R_HIP_R  }
+      - { key: Q_Angles, id: [2], label: R_HIP_Y  }
+      - { key: Q_Angles, id: [3], label: R_KNEE   }
+      - { key: Q_Angles, id: [4], label: R_ANKLE_R}
+      - { key: Q_Angles, id: [5], label: R_ANKLE_P}
+    bottom_label:
+  Left_Leg:
+    legends:
+      - { key: Q_Angles, id: [6], label: L_HIP_P  }
+      - { key: Q_Angles, id: [7], label: L_HIP_R  }
+      - { key: Q_Angles, id: [8], label: L_HIP_Y  }
+      - { key: Q_Angles, id: [9], label: L_KNEE   }
+      - { key: Q_Angles, id: [10], label: L_ANKLE_R}
+      - { key: Q_Angles, id: [11], label: L_ANKLE_P}
+    bottom_label:

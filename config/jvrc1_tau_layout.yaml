@@ -1,0 +1,19 @@
+main:
+  Right_Leg:
+    legends:
+      - { key: Tau, id: [0], label: R_HIP_P  }
+      - { key: Tau, id: [1], label: R_HIP_R  }
+      - { key: Tau, id: [2], label: R_HIP_Y  }
+      - { key: Tau, id: [3], label: R_KNEE   }
+      - { key: Tau, id: [4], label: R_ANKLE_R}
+      - { key: Tau, id: [5], label: R_ANKLE_P}
+    bottom_label:
+  Left_Leg:
+    legends:
+      - { key: Tau, id: [6], label: L_HIP_P  }
+      - { key: Tau, id: [7], label: L_HIP_R  }
+      - { key: Tau, id: [8], label: L_HIP_Y  }
+      - { key: Tau, id: [9], label: L_KNEE   }
+      - { key: Tau, id: [10], label: L_ANKLE_R}
+      - { key: Tau, id: [11], label: L_ANKLE_P}
+    bottom_label:

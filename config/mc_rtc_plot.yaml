@@ -49,6 +49,9 @@ CM_CoM_MPC:
     - { log: CentroidalManager_CoM_MPC, column: [0-2] }
 CM_CoM_planned:
   data:
+    - { log: CentroidalManager_CoM_planned, column: [0-2] }
+CM_CoM_planned_com:
+  data:
     - { log: CentroidalManager_CoM_planned_com, column: [0-2] }
 CM_CoM_planned_vel:
   data:
@@ -247,6 +250,25 @@ QP_FootTask_Left:
 QP_FootTask_Right:
     data:
     - { log: CentroidalManager_IRSL_LOG_QP_FootTask_Right, column: [0-5] }
+####
+Tau:
+  data:
+    - { log: tauIn, column: [0-43] }
+Q_Angles:
+  data:
+    - { log: qIn, column: [0-43] }
+FootTask_Left_pose:
+  data:
+    - { log: FootTask_Left_pose, column: [0-6] }
+FootTask_Right_pose:
+  data:
+    - { log: FootTask_Right_pose, column: [0-6] }
+FootTask_Left_target_pose:
+  data:
+    - { log: FootTask_Left_target_pose, column: [0-6] }
+FootTask_Right_target_pose:
+  data:
+    - { log: FootTask_Right_target_pose, column: [0-6] }
 
 #abc_refZmp:
 #  func: plot_add

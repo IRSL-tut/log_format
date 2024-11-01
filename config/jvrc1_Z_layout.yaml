@@ -1,0 +1,12 @@
+main:
+  Foot_Z:
+    legends:
+      - { key: FootTask_Right_pose, id: [6] }
+      - { key: FootTask_Left_pose,  id: [6] }
+    bottom_label:
+  CoM_Z:
+    legends:
+      - { key: CM_CoM_planned, id: [2] }
+      - { key: CM_ZMP_ref,     id: [2] }
+      - { key: CM_ZMP_planned, id: [2] }
+    bottom_label:

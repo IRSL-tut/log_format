@@ -1,0 +1,19 @@
+main:
+  CoM_X:
+    legends:
+      - { key: CM_CoM_planned, id: [0] }
+      - { key: CM_ZMP_ref,     id: [0] }
+      - { key: CM_ZMP_planned, id: [0] }
+    bottom_label:
+  CoM_Y:
+    legends:
+      - { key: CM_CoM_planned, id: [1] }
+      - { key: CM_ZMP_ref,     id: [1] }
+      - { key: CM_ZMP_planned, id: [1] }
+    bottom_label:
+  CoM_Z:
+    legends:
+      - { key: CM_CoM_planned, id: [2] }
+      - { key: CM_ZMP_ref,     id: [2] }
+      - { key: CM_ZMP_planned, id: [2] }
+    bottom_label:

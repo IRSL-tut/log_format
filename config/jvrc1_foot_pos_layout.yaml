@@ -1,0 +1,15 @@
+main:
+  X:
+    legends:
+      - { key: FootTask_Right_pose, id: [4] }
+      - { key: FootTask_Right_target_pose, id: [4] }
+      - { key: FootTask_Left_pose,  id: [4] }
+      - { key: FootTask_Left_target_pose,  id: [4] }
+    bottom_label:
+  Z:
+    legends:
+      - { key: FootTask_Right_pose, id: [6] }
+      - { key: FootTask_Right_target_pose, id: [6] }
+      - { key: FootTask_Left_pose,  id: [6] }
+      - { key: FootTask_Left_target_pose,  id: [6] }
+    bottom_label:
