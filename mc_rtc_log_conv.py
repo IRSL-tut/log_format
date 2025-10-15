@@ -51,7 +51,7 @@ def main():
                     topic_list[key[0]] = [keys]
 
     if args.p is None:
-        prefix=args.f.split('.')[0]
+        prefix = os.path.splitext( os.path.basename(args.f) )[0]
         ## 'mc-control-BaselineWalkingController-2024-10-29-12-51-28'
     else:
         prefix = args.p

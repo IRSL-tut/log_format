@@ -50,7 +50,7 @@ def main():
                     topic_list[key[0]] = [keys]
 
     if args.p is None:
-        prefix=args.f.split('.')[0]
+        prefix = os.path.splitext( os.path.basename(args.f) )[0]
     else:
         prefix = args.p
     if args.d is not None:
